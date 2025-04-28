@@ -13,26 +13,26 @@ using Services.Abstractions;
 
 namespace E_Commerce
 {
-	public class Program
-	{
-		public static async Task Main(string[] args)
-		{
-			var builder = WebApplication.CreateBuilder(args);
+    public class Program
+    {
+        public static async Task Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
 
-			// Add services to the container.
+            // Add services to the container.
 
-			
+
             #region  ConfigureServices
             builder.Services.AddInfraStructureServices(builder.Configuration);
             builder.Services.AddCoreServices(builder.Configuration);
             builder.Services.AddPersentationServices();
-			
+
 
 
             #endregion
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-			builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen();
             #region Build
             var app = builder.Build();
             #endregion
@@ -47,6 +47,7 @@ namespace E_Commerce
                 app.UseSwaggerUI();
             }
             app.UseStaticFiles();
+            app.UseCors("CORSPolicy");
             app.UseHttpsRedirection();
 
             app.UseAuthentication();
@@ -57,9 +58,9 @@ namespace E_Commerce
 
             app.Run();
 
-            
+
             #endregion
 
         }
-	}
+    }
 }

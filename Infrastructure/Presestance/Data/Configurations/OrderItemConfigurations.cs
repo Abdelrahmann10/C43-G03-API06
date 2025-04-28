@@ -9,13 +9,11 @@ using System.Threading.Tasks;
 
 namespace Persistence.Data.Configurations
 {
-	public class OrderItemConfigurations : IEntityTypeConfiguration<OrderItem>
-	{
-		public void Configure(EntityTypeBuilder<OrderItem> builder)
-		{
-			builder.Property(o => o.Price).HasColumnType("decimal(18, 3)");
-			//For Relations
-			builder.OwnsOne(i => i.Product, p => p.WithOwner());
-		}
-	}
+    public class DeliveryMethodConfigurations : IEntityTypeConfiguration<DeliveryMethod>
+    {
+        public void Configure(EntityTypeBuilder<DeliveryMethod> builder)
+        {
+            builder.Property(p => p.Price).HasColumnType("decimal(18, 3)");
+        }
+    }
 }

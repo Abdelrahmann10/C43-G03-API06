@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace Services.Specifications
 {
-	public class OrderWithIncludeSpecifications : Specifications<OrderEntity>
-	{
+    public class OrderWithIncludeSpecifications : Specifications<OrderEntity>
+    {
         public OrderWithIncludeSpecifications(Guid id)
             : base(o => o.Id == id)
         {
@@ -18,14 +18,14 @@ namespace Services.Specifications
             AddInclude(O => O.OrderItems);
         }
 
-		//Get By Email
-		public OrderWithIncludeSpecifications(string email)
-			: base(o => o.UserEmail == email)
-		{
-			AddInclude(O => O.DeliveryMethod);
-			AddInclude(O => O.OrderItems);
-			SetOrderBy(O => O.OrderDate);
+        //Get By Email
+        public OrderWithIncludeSpecifications(string email)
+            : base(o => o.UserEmail == email)
+        {
+            AddInclude(O => O.DeliveryMethod);
+            AddInclude(O => O.OrderItems);
+            SetOrderBy(O => O.OrderDate);
 
-		}
-	}
+        }
+    }
 }

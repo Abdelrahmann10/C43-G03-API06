@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace Services.MappingProfiles
 {
-	public class BasketProfile : Profile
-	{
+    public class BasketProfile : Profile
+    {
         public BasketProfile()
         {
             CreateMap<CustomerBasket, BasketDto>().ReverseMap();

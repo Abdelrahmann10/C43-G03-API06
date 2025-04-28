@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Services.Abstractions
 {
-	public interface IBasketService
-	{
-		public Task<BasketDto?> GetBasketAsync(string id);
-		public Task<BasketDto?> UpdateBasketAsync(BasketDto basketDto);
-		public Task<bool> DeleteBasketAsync(string id);
+    public interface IBasketService
+    {
+        public Task<BasketDto?> GetBasketAsync(string id);
+        public Task<BasketDto?> UpdateBasketAsync(BasketDto basketDto);
+        public Task<bool> DeleteBasketAsync(string id);
 
-	}
+    }
 }

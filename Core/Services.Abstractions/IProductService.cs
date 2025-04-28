@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Services.Abstractions
 {
-	public interface IProductService
-	{
-		public Task<PaginatedResult<ProductResultDto>> GetAllProductsAsync(ProductSpecificationsParameters parameters);
-		public Task<IEnumerable<BrandResultDto>> GetAllBrandsAsync();
-		public Task<IEnumerable<TypeResultDto>> GetAllTypeAsync();
-		public Task<ProductResultDto?> GetProductByIdAsync(int id);
-	}
+    public interface IProductService
+    {
+        public Task<PaginatedResult<ProductResultDto>> GetAllProductsAsync(ProductSpecificationsParameters parameters);
+        public Task<IEnumerable<BrandResultDto>> GetAllBrandsAsync();
+        public Task<IEnumerable<TypeResultDto>> GetAllTypeAsync();
+        public Task<ProductResultDto?> GetProductByIdAsync(int id);
+    }
 }

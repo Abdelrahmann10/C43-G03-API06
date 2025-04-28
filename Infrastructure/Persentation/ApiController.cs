@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace Persentation
 {
-	[ApiController]
-	[Route("api/[Controller]")]
-	[ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.NotFound)]
-	[ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.InternalServerError)]
-	[ProducesResponseType(typeof(ValidationErrorsResponse), (int)HttpStatusCode.BadRequest)]
-	[ProducesResponseType(typeof(ProductResultDto), (int)HttpStatusCode.OK)]
-	public class ApiController : ControllerBase
-	{
-	}
+    [ApiController]
+    [Route("api/[Controller]")]
+    [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.NotFound)]
+    [ProducesResponseType(typeof(ErrorDetails), (int)HttpStatusCode.InternalServerError)]
+    [ProducesResponseType(typeof(ValidationErrorsResponse), (int)HttpStatusCode.BadRequest)]
+    [ProducesResponseType(typeof(ProductResultDto), (int)HttpStatusCode.OK)]
+    public class ApiController : ControllerBase
+    {
+    }
 }
